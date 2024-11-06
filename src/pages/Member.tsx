@@ -29,6 +29,8 @@ function MemberPage() {
     }
   }, [inView, isFetching, hasNextPage, fetchNextPage]);
 
+  console.log(members?.pages.map((page) => console.log(page.result.memberList.map((data) => console.log(data.email)))));
+
   return (
     <div css={container}>
       <div>

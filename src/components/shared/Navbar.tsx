@@ -1,4 +1,5 @@
 import { Link, useNavigate } from 'react-router-dom';
+import { getProfile } from '@apis/auth.ts';
 import { css } from '@emotion/react';
 import { useUser } from '@hooks/AuthProvider.tsx';
 import useAuth from '@hooks/useAuth.ts';
@@ -11,6 +12,8 @@ function Navbar() {
   const { logoutMutation } = useAuth();
 
   const navigate = useNavigate();
+
+  const { getProfileQuery } = useAuth();
 
   return (
     <Flex justify="space-between" align="center" css={navbarContainer}>

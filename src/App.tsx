@@ -1,41 +1,27 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import PrivateRoute from '@components/auth/PrivateRoute';
-import AcademyPage from '@pages/Academy.tsx';
-import HomePage from '@pages/Home.tsx';
-import MemberPage from '@pages/Member.tsx';
-import SigninPage from '@pages/Signin.tsx';
-import Navbar from '@shared/Navbar.tsx';
+import './App.css';
+import HomePage from './pages/HomePage/HomePage';
+import LoginPage from './pages/LoginPage/LoginPage';
+import { pageRoutes } from './shared/constants/pageRoutes';
+import AcademyRegisterListPage from './pages/AcademyRegisterListPage/AcademyRegisterListPage';
+import AcademyDetailPage from './pages/AcademyDetailPage/AcademyDetailPage';
+import AcademyListPage from './pages/AcademyListPage/AcademyListPage';
 
 function App() {
   return (
     <BrowserRouter>
-      <Navbar />
       <Routes>
+        <Route path={pageRoutes.main} element={<HomePage />} />
+        <Route path={pageRoutes.login} element={<LoginPage />} />\
         <Route
-          path="/"
-          element={
-            <PrivateRoute>
-              <HomePage />
-            </PrivateRoute>
-          }
-        />
-        <Route path="/signin" element={<SigninPage />} />
-        <Route
-          path="/academy"
-          element={
-            <PrivateRoute>
-              <AcademyPage />
-            </PrivateRoute>
-          }
+          path={pageRoutes.academy_register}
+          element={<AcademyRegisterListPage />}
         />
         <Route
-          path="/member"
-          element={
-            <PrivateRoute>
-              <MemberPage />
-            </PrivateRoute>
-          }
+          path={pageRoutes.academy_detail}
+          element={<AcademyDetailPage />}
         />
+        <Route path={pageRoutes.academy_list} element={<AcademyListPage />} />
       </Routes>
     </BrowserRouter>
   );

@@ -6,6 +6,7 @@ import { pageRoutes } from './shared/constants/pageRoutes';
 import AcademyRegisterListPage from './pages/AcademyRegisterListPage/AcademyRegisterListPage';
 import AcademyDetailPage from './pages/AcademyDetailPage/AcademyDetailPage';
 import AcademyListPage from './pages/AcademyListPage/AcademyListPage';
+import CreateCrabitChallengePage from './pages/CreateCrabitChallengePage/CreateCrabitChallengePage';
 
 function App() {
   return (
@@ -22,6 +23,10 @@ function App() {
           element={<AcademyDetailPage />}
         />
         <Route path={pageRoutes.academy_list} element={<AcademyListPage />} />
+        <Route
+          path={pageRoutes.create_crabit_challenge}
+          element={<CreateCrabitChallengePage />}
+        />
       </Routes>
     </BrowserRouter>
   );

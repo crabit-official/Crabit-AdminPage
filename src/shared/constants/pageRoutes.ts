@@ -4,4 +4,5 @@ export const pageRoutes = {
   academy_register: '/academy/register',
   academy_detail: '/academy/:academyId',
   academy_list: '/academy/list',
+  create_crabit_challenge: '/challenge/create',
 };

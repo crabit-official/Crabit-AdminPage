@@ -7,6 +7,7 @@ import AcademyRegisterListPage from './pages/AcademyRegisterListPage/AcademyRegi
 import AcademyDetailPage from './pages/AcademyDetailPage/AcademyDetailPage';
 import AcademyListPage from './pages/AcademyListPage/AcademyListPage';
 import CreateCrabitChallengePage from './pages/CreateCrabitChallengePage/CreateCrabitChallengePage';
+import Navbar from './shared/components/Navbar/Navbar';
 
 function App() {
   return (
